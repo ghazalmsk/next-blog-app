@@ -53,6 +53,12 @@
 }
 
 @layer components {
+  .form {
+    @apply flex flex-col gap-y-8 bg-secondary-0 p-4 rounded-xl w-full max-w-lg;
+  }
+  .textField__input {
+    @apply w-full py-3 px-4 rounded-xl text-secondary-900 border border-secondary-100 bg-secondary-100 hover:border-primary-500 focus:border-primary-500 focus:bg-secondary-0 transition-all duration-300 ease-out focus:shadow-lg focus:shadow-primary-200 dark:focus:shadow-secondary-200;
+  }
   .btn {
     @apply px-3 py-3 rounded-xl transition-all duration-300;
   }
@@ -126,4 +132,16 @@ button:disabled {
   color: rgb(var(--color-secondary-700), 0.5);
   pointer-events: none;
   box-shadow: none;
+}
+
+/* inupt number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }
