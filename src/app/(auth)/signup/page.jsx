@@ -76,12 +76,7 @@ function Signup() {
             تایید
           </Button>
         )}
-        <Button
-          type="submit"
-          className="py-3 px-4 btn btn--primary rounded-xl w-full"
-        >
-          ورود
-        </Button>
+        
       </form>
       <Link href="/signin" className="text-secondary-400 mt-6 text-center">
         ورود
