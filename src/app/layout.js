@@ -1,18 +1,22 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
 import vazirFont from "@/constants/localFont";
 import AuthProvider from "@/context/AuthContext";
-import Header from "@/components/Header";
 import { Toaster } from "react-hot-toast";
+
+export const metadata = {
+  title: {
+    template: "%s | blog app",
+    default: "blog app",
+  },
+  description: "Web application for managing blogs and user comments",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
       <body className={`${vazirFont.variable} font-sans min-h-screen`}>
-        <AuthProvider>
-          <Toaster />
-          <Header />
-          <div className="container xl:max-w-screen-xl">{children}</div>
-        </AuthProvider>
+        <Toaster />
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
