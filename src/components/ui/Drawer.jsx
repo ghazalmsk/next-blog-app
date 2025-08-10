@@ -14,7 +14,7 @@ function Drawer({ open, onclose, children }) {
 
       <div
         className={`fixed top-0 w-[250px] h-full transition-transform transform ${
-          open ? "translate-x-0" : "translate-x-full"
+          open ? "translate-x-0" : "-translate-x-full"
         }`}
         onClick={(event) => {
           event.preventDefault();

@@ -14,6 +14,7 @@ export default function Search() {
     const val = e.target;
     const search = val.search;
     const newParams = new URLSearchParams(searchParams.toString());
+    newParams.set("page", "1");
     if (search.value) {
       newParams.set("q", search.value);
     } else {
@@ -40,7 +41,7 @@ export default function Search() {
       />
       <button
         type="submit"
-        className="absolute left-0 top-0 ml-3 flex h-full items-center"
+        className="absolute left-0 top-0 mr-3 flex h-full items-center"
       >
         <MagnifyingGlassIcon className="h-4 text-secondary-400" />
       </button>

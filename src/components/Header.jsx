@@ -5,12 +5,12 @@ import NavLink from "./NavLink";
 const navLinks = [
   {
     id: 1,
-    children: "خانه",
+    children: "home",
     path: "/",
   },
   {
     id: 2,
-    children: "بلاگ ها",
+    children: "blogs",
     path: "/blogs",
   },
 ];
@@ -35,9 +35,9 @@ function Header() {
           </div>
           <li>
             {user ? (
-              <NavLink path="/profile">پروفایل</NavLink>
+              <NavLink path="/profile">profile</NavLink>
             ) : (
-              <NavLink path="/signin">ورود</NavLink>
+              <NavLink path="/signin">signin</NavLink>
             )}
           </li>
         </ul>

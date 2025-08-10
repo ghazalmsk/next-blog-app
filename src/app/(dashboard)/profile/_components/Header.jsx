@@ -27,11 +27,11 @@ function Header() {
         </ButtonIcon>
 
         <span className="text-sm lg:text-lg font-bold text-secondary-700">
-          سلام؛ {user?.name}
+          Welcome {user?.name}
         </span>
 
         <Link href="/profile">
-          <Avatar src={user?.avatarUrl} />
+          {/* <Avatar src={user?.avatarUrl} /> */}
         </Link>
 
         <Drawer open={isOpenDrawer} onClose={() => setIsOpenDrawer(false)}>

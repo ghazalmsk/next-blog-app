@@ -2,10 +2,10 @@ export default function RHFTextField({
   type = "text",
   label,
   name,
-  dir = "rtl",
+  dir = "ltr",
   register,
   errors,
-  isRequired,
+  required,
   validationSchema = {},
   ...rest
 }) {
@@ -17,7 +17,7 @@ export default function RHFTextField({
     >
       <label htmlFor={name} className="mb-2 block text-secondary-700">
         {label}
-        {isRequired && <span className="text-error">*</span>}
+        {required && <span className="text-error">*</span>}
       </label>
       <input
         autoComplete="off"
